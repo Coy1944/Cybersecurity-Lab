@@ -1,0 +1,17 @@
+I saw the instructions and I was not really sure how to code a my cipher. I remember one of the first ciphers I learned about was the rot 13 which would take the alphabet and change each letter exactly 13 letters down in the alphabet.
+
+I decided to make a simple one that would do something similar but go back words 3 letters. Its simple but it will work.
+
+Here is is the code
+
+const ci3 = (message) => {
+  const originalAlpha = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  const cipher = "xyzabcdefghijklmnopqrstuvwXYZABCDEFGHIJKLMNOPQRSTUVW"
+  return message.replace(/[a-z]/gi, letter => cipher[originalAlpha.indexOf(letter)])
+}
+console.log(ci3('I love cryptopgyphy'))
+console.log(ci3('F ilsb zovmqlmdvmev’))
+
+I simple define the original alphabet and the new cipher. Then use the .replace to go through the letters and then the cipher.
+
+I was not able to get the I love cryptography code to work because it just takes the coded message and goes back 3 letters. 
